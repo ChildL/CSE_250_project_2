@@ -53,6 +53,16 @@ df1 = datac.groupby('airport_code').agg({'num_of_flights_total':
     proportion_delayed_flights = lambda x: x.num_of_delays_total / x.num_of_flights_total *100,
     avg_hours_delayed_total = lambda x: x.minutes_delayed_total /60
     )
+
+# should be newdf1 = flights.groupby('airport_code').agg(
+# sum_of_flights = ('num_of_flights_total',sum),
+# sum_of_delays = ('num_of_delays_total', sum'),
+# sum_of_delay_min = ('minutes_delayed_total', sum)
+# ).assign(percent_delays = lambda x: x.sum_of_delays/ x. sum_of_flights,
+# avg_delay_hours = lambda x: x.sum_of_delay_min/ sum_of_delays/ 60)
+  
+# newdf1.drop ('minutes_delayed_total', axis = 1, inplace=True) 
+# newdf1
 # %%
 df1.drop('minutes_delayed_total', axis=1, inplace=True)
 df1

@@ -27,7 +27,9 @@ flights.num_of_delays_late_aircraft.describe()
 ndmeans = (flights.num_of_delays_late_aircraft
     .replace(-999, np.NaN).mean())
 
-ndmeans    
+ndmeans   
+# %%
+flights.head() 
 # %%
 # taking the mean value found and replacing the -999 value with
 # NaN and then filling in the mean and storing it in new data datac
